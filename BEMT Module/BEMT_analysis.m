@@ -16,6 +16,7 @@ if FOLDER_ADDRESS(end-10:end) == 'BEMT Module'
     addpath(genpath(FOLDER_ADDRESS(1:end-11)))
 else
     addpath(genpath(FOLDER_ADDRESS))
+    cd(strcat(FOLDER_ADDRESS,'\BEMT Module'))
 end
 
 
@@ -236,3 +237,4 @@ end
            case 3
                run Performance_sweep
        end
+cd(FOLDER_ADDRESS)
